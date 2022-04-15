@@ -1,50 +1,35 @@
-// import logo from './logo.svg';
-// import './App.css';
-//
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-//
-// export default App;
-
-
-import React, {Component, useState, useEffect} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import axios from 'axios';
 
-function App () {
-    const [message, setMessage] = useState("");
+function App() {
 
-    useEffect(() => {
-        fetch('/mainProductBoard')
-            .then(response => response.text())
-            .then(message => {
-                setMessage(message);
-            });
-    },[])
+    axios.get("/mainBoard")
+        .then((Response) => {
+            console.log(Response.data)
+        })
+        .catch((Error) => {
+            console.log(Error)
+        });
+
     return (
-<div>
-    {message}
-</div>
-
-    )
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
 }
 
 export default App;
