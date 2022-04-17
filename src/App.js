@@ -4,13 +4,15 @@ import axios from 'axios';
 
 function App() {
 
-    axios.get("/mainBoard")
-        .then((Response) => {
-            console.log(Response.data)
+    const test = axios.get("/mainBoard")
+        .then(function(response) {
+            console.log(response.data)
         })
-        .catch((Error) => {
-            console.log(Error)
+        .catch(function(error) {
+            console.log(error)
         });
+
+
 
     return (
     <div className="App">
