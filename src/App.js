@@ -1,18 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
-import axios from 'axios';
+import axios, {Axios} from 'axios';
+import react, {useEffect, useState} from "react";
 
-function App() {
+function App(){
 
-    const test = axios.get("/mainBoard")
-        .then(function(response) {
-            console.log(response.data)
-        })
-        .catch(function(error) {
-            console.log(error)
-        });
+        const [data,setData] = useState('');
 
-
+        function searchApi() {
+            const url = "/mainBoard";
+            axios.get(url)
+                .then(function(response) {
+                    setData(response.data);
+                    console.log("성공");
+                    console.log(response.data);
+                })
+                .catch(function(error) {
+                    console.log("실패");
+                })
+        }
+searchApi();
 
     return (
     <div className="App">
@@ -29,7 +36,15 @@ function App() {
         >
           Learn React
         </a>
+          {/*{<textarea rows={7} value={JSON.stringify(data,null,2)} />}*/}
+
+          data.map(data => (
+          <div key={data.mainProductId}>
+              <p>title : {data.mainProductTitle}</p>
+          </div>)
+
       </header>
+
     </div>
   );
 }
