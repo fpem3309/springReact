@@ -1,14 +1,23 @@
 import React from 'react';
 
 const ListBoardComponent = (props) => {
-    const {mainProductId,mainProductTitle,mainProductContent,mainProductDate,mainProductCategory,mainProductHit} = props.board;
+    const {
+        mainProductId,
+        mainProductTitle,
+        mainProductContent,
+        mainProductDate,
+        mainProductCategory,
+        mainProductHit
+    } = props.board;
     return (
-        <div>
+        <div id="cate_area">
+            <div className="cate_board">
+                <p>Java</p>
                 <table>
                     <thead>
                     <colgroup>
                         <col width="70%"/>
-                            <col width="30%"/>
+                        <col width="30%"/>
                     </colgroup>
                     </thead>
 
@@ -20,6 +29,7 @@ const ListBoardComponent = (props) => {
                     </tr>
                     </tbody>
                 </table>
+            </div>
         </div>
     );
 };

@@ -17,43 +17,26 @@ const App = () => {
                 });
         }, []);
 
-        // function searchApi() {
-        //     const url = "/mainBoard";
-        //     axios.get(url)
-        //         .then(function (response) {
-        //             setData(response.data);
-        //             console.log("성공");
-        //             console.log(response.data);
-        //         })
-        //         .catch(function (error) {
-        //             console.log("실패");
-        //         })
-        // }
-
-//searchApi();
 
         return (
             <div className="App">
                 <header className="App-header">
-                    <img src={logo} className="App-logo" alt="logo"/>
-                    <p>
-                        Edit <code>src/App.js</code> and save to reload.
-                    </p>
-                    <a
-                        className="App-link"
-                        href="https://reactjs.org"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Learn React
-                    </a>
-                    {/*{<textarea rows={7} value={JSON.stringify(data,null,2)} />}*/}
+                    {/*<img src={logo} className="App-logo" alt="logo"/>*/}
+                    {/*<p>*/}
+                    {/*    Edit <code>src/App.js</code> and save to reload.*/}
+                    {/*</p>*/}
+                    {/*<a*/}
+                    {/*    className="App-link"*/}
+                    {/*    href="https://reactjs.org"*/}
+                    {/*    target="_blank"*/}
+                    {/*    rel="noopener noreferrer"*/}
+                    {/*>*/}
+                    {/*    Learn React*/}
+                    {/*</a>*/}
                     {data.map(
                         board =>(
                             <ListBoardComponent key={board.id} board={board}/>
                         ))}
-
-
                 </header>
 
             </div>

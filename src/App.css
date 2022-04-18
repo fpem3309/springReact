@@ -36,3 +36,35 @@
     transform: rotate(360deg);
   }
 }
+
+/*table*/
+#cate_area {
+  width: 1300px;
+  float: right;
+  margin-top: 50px;
+}
+
+.cate_board {
+  margin: 15px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 400px;
+  height: 270px;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody > tr:hover {
+  background-color: #9CE3B3FF;
+}
+
+p {
+  padding-left: 5px;
+  background-color: #2BAE66;
+  color: white;
+  width: auto;
+}
