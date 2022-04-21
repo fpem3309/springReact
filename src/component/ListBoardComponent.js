@@ -14,18 +14,10 @@ const ListBoardComponent = (props) => {
             <div className="cate_board">
                 <p>Java</p>
                 <table>
-                    <thead>
-                    <colgroup>
-                        <col width="70%"/>
-                        <col width="30%"/>
-                    </colgroup>
-                    </thead>
-
                     <tbody>
                     <tr>
                         <td>{mainProductTitle}</td>
                         <td>{mainProductDate}</td>
-
                     </tr>
                     </tbody>
                 </table>

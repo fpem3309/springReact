@@ -1,7 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
-import axios, {Axios} from 'axios';
-import react, {useEffect, useState} from "react";
+//import axios, {Axios} from 'axios';
+import React, {useEffect, useState} from "react";
 import ListBoardComponent from "./component/ListBoardComponent";
 
 const App = () => {
@@ -9,7 +8,7 @@ const App = () => {
         const [data, setData] = useState([]);
 
         useEffect(() => {
-            fetch("/mainBoard")
+            fetch("http://172.30.1.38:3000/mainBoard")
                 .then((res) => res.json())
                 .then((res) => {
                     console.log(1, res);
@@ -33,9 +32,10 @@ const App = () => {
                     {/*>*/}
                     {/*    Learn React*/}
                     {/*</a>*/}
+                    <a>MainBoard</a>
                     {data.map(
                         board =>(
-                            <ListBoardComponent key={board.id} board={board}/>
+                            <ListBoardComponent key={board.mainProductId} board={board}/>
                         ))}
                 </header>
 
